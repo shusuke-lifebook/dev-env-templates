@@ -1,0 +1,56 @@
+{
+  // ワークベンチの設定
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai",
+
+  // 保存時に自動フォーマット(clang-formatを使用)
+  "editor.formatOnSave": true,
+
+  // タブとインデント設定(Googleスタイルベース)
+  "editor.tabSize": 4,
+  "editor.insertSpaces": false,
+
+  // C/C++のフォーマットスタイル(clang-format)
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4, TabWidth: 4, UseTab: Always }",
+
+  // IntelliSenseエンジンの指定（Tag ParserよりDefault推奨）
+  "C_Cpp.intelliSenseEngine": "default",
+
+  // エラー表示の強化
+  "C_Cpp.errorSquiggles": "enabled",
+
+  // インクルード補完の設定
+  "C_Cpp.autocomplete": "default",
+
+  // WSL2を標準ターミナルとして使用
+  //   【windowsで利用する場合】
+  //   "terminal.integrated.defaultProfile.windows": "WSL",
+  //   "terminal.integrated.profiles.windows": {
+  //     "WSL": {
+  //       "path": "C:\\WINDOWS\\System32\\wsl.exe"
+  //     }
+  //   },
+
+  // 保存時に末尾の空白を削除
+  "files.trimTrailingWhitespace": true,
+
+  // ファイルの自動保存（任意）
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // ファイルのエンコーディング
+  "files.encoding": "utf8",
+  "files.autoGuessEncoding": false,
+
+  // 不要なビルド生成ファイルを非表示
+  "files.exclude": {
+    "**/*.o": true,
+    "**/*.out": true
+  },
+
+  // 検索対象から除外
+  "search.exclude": {
+    "**/*.o": true,
+    "**/*.out": true
+  }
+}
