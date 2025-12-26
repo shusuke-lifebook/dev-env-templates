@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "WSL: Ubuntu にインストールされている拡張機能:",
     "adrianwilczynski.asp-net-core-switcher",
     "batisteo.vscode-django",
     "bmewburn.vscode-intelephense-client",
