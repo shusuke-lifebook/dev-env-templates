@@ -1,0 +1,35 @@
+{
+  // --- TypeScript / JavaScript 設定 ---
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+
+  // --- ESLint & Prettier ---
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // --- 表示設定（Python と同じ UI カスタム） ---
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+
+  // --- ファイル関連 ---
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true
+  },
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+
+  // --- ターミナル設定（WSL2 Ubuntu） ---
+  "terminal.integrated.defaultProfile.linux": "bash",
+
+  // --- VSCode UI カスタマイズ（Python と同じ） ---
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai"
+}
