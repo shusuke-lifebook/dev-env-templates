@@ -31,5 +31,25 @@
 
   // --- VSCode UI カスタマイズ（Python と同じ） ---
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Monokai"
+  "workbench.colorTheme": "Monokai",
+
+  // Djangoのプラグインの有効でhtmlがdjとなるのを防ぐ対応
+  "vsicons.associations.files": [
+    {
+      "icon": "html",
+      "extensions": ["html"],
+      "format": "svg"
+    },
+    {
+      "icon": "django",
+      "extensions": ["djhtml", "jinja"],
+      "format": "svg"
+    }
+  ],
+  // Emmetの設定
+  "emmet.includeLanguages": {
+    "html": "html",
+    "django-html": "html",
+    "jinja-html": "html"
+  }
 }
