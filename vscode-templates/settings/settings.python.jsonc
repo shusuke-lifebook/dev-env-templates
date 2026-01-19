@@ -9,14 +9,14 @@
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "explicit",
   },
 
   // --- ファイル関連 ---
   "files.exclude": {
     "**/__pycache__": true,
     "**/.pytest_cache": true,
-    "**/.venv": true
+    "**/.venv": true,
   },
   "files.eol": "\n",
   "files.encoding": "utf8",
@@ -24,10 +24,14 @@
   // --- ターミナル設定 (WSL2 Ubuntu + venv) ---
   "terminal.integrated.env.linux": {
     "VIRTUAL_ENV": "${workspaceFolder}/.venv",
-    "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+    "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}",
   },
 
   // --- VSCode UI カスタマイズ ---
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Monokai"
+  "workbench.colorTheme": "Monokai",
+
+  // --- gitの設定 ---
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
 }

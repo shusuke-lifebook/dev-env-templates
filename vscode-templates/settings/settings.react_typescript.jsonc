@@ -10,7 +10,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "explicit",
   },
 
   // --- 表示設定（Python と同じ UI カスタム） ---
@@ -21,7 +21,7 @@
   "files.exclude": {
     "**/node_modules": true,
     "**/dist": true,
-    "**/build": true
+    "**/build": true,
   },
   "files.eol": "\n",
   "files.encoding": "utf8",
@@ -38,18 +38,21 @@
     {
       "icon": "html",
       "extensions": ["html"],
-      "format": "svg"
+      "format": "svg",
     },
     {
       "icon": "django",
       "extensions": ["djhtml", "jinja"],
-      "format": "svg"
-    }
+      "format": "svg",
+    },
   ],
   // Emmetの設定
   "emmet.includeLanguages": {
     "html": "html",
     "django-html": "html",
-    "jinja-html": "html"
-  }
+    "jinja-html": "html",
+  },
+  // --- gitの設定 ---
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
 }

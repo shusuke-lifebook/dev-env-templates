@@ -45,12 +45,16 @@
   // 不要なビルド生成ファイルを非表示
   "files.exclude": {
     "**/*.o": true,
-    "**/*.out": true
+    "**/*.out": true,
   },
 
   // 検索対象から除外
   "search.exclude": {
     "**/*.o": true,
-    "**/*.out": true
-  }
+    "**/*.out": true,
+  },
+
+  // --- gitの設定 ---
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
 }
