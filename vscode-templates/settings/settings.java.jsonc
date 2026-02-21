@@ -4,7 +4,6 @@
   "java.import.gradle.enabled": true,
   "java.import.maven.enabled": true,
   "java.referencesCodeLens.enabled": true,
-  "java.implementationsCodeLens.enabled": true,
 
   // --- Prettier for Java をデフォルトフォーマッタに設定 ---
   "[java]": {
@@ -17,10 +16,6 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit",
   },
-
-  // --- 逆コンパイル設定（FernFlower） ---
-  "java.decompiler.enabled": true,
-  "java.decompiler": "fernflower",
 
   // --- エディタ設定（Python と統一） ---
   "editor.renderWhitespace": "all",
