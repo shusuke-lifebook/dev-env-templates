@@ -1,0 +1,59 @@
+{
+  // --- Java 基本設定 ---
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.import.gradle.enabled": true,
+  "java.import.maven.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.implementationsCodeLens.enabled": true,
+
+  // --- Prettier for Java をデフォルトフォーマッタに設定 ---
+  "[java]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "editor.formatOnSave": true,
+
+  // --- インポート整理 ---
+  "java.saveActions.organizeImports": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+  },
+
+  // --- 逆コンパイル設定（FernFlower） ---
+  "java.decompiler.enabled": true,
+  "java.decompiler": "fernflower",
+
+  // --- エディタ設定（Python と統一） ---
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+
+  // --- ファイル関連 ---
+  "files.exclude": {
+    "**/target": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+  },
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+
+  // --- ターミナル設定（WSL2 Ubuntu + mise） ---
+  // mise の shim を使うことで Java バージョン切替に自動追従
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.env.linux": {
+    "JAVA_HOME": "${env:HOME}/.local/share/mise/shims",
+    "PATH": "${env:HOME}/.local/share/mise/shims:${env:PATH}",
+  },
+
+  // --- VSCode UI カスタマイズ（Python と同じ） ---
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai",
+
+  // --- Git 設定 ---
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
+
+  // --- デバッグ設定 ---
+  "java.debug.settings.hotCodeReplace": "auto",
+  "java.debug.settings.forceBuildBeforeLaunch": true,
+}
