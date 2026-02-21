@@ -1,0 +1,74 @@
+# ============================
+# Java / VSCode / Maven / Gradle
+# ============================
+
+# --- Build outputs ---
+/target/
+/build/
+/out/
+
+# --- IDE / Editor ---
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# --- Java specific ---
+*.class
+*.jar
+*.war
+*.ear
+*.jpi
+*.log
+
+# --- OS / Misc ---
+.DS_Store
+Thumbs.db
+
+# --- Maven ---
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/MavenWrapperDownloader.java
+.mvn/timing.properties
+
+# --- Gradle ---
+.gradle/
+**/build/
+gradle-app.setting
+!gradle/wrapper/gradle-wrapper.jar
+
+# --- Logs / Temp ---
+*.log
+*.tmp
+*.swp
+*.swo
+
+# --- Environment / Tools ---
+# mise (asdf successor)
+# ※ shim やインストール先は HOME 配下なので通常は不要
+# ただし、プロジェクト直下に .tool-versions がある場合は残す
+.tool-versions
+
+# --- Java LSP / VSCode Java ---
+# RedHat Java Language Server cache
+.redhat/
+.jdt/
+.workspace/
+
+# --- Lombok ---
+lombok.config
+
+# --- Others ---
+*.orig
+*.rej
