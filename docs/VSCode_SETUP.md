@@ -36,3 +36,6 @@ cp vscode-templates/settings.python.jsonc .vscode/settings.json
 ```bash
 cp vscode-templates/extensions.json .vscode/extensions.json
 ```
+
+## インストール済み拡張一覧からextensions.jsonを自動生成する
+- コマンド: code --list-extensions | jq -R -s '{recommendations: split("\n")[:-1]}' > extensions.json

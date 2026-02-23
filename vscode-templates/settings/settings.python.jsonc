@@ -34,4 +34,19 @@
   // --- gitの設定 ---
   "git.autofetch": true,
   "git.autofetchPeriod": 180,
+
+  // Markdown 専用設定
+  "[markdown]": {
+    "editor.insertSpaces": true,
+    "editor.inlineSuggest.enabled": false,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false,
+    }, // Markdown では補完を抑制
+    "editor.renderWhitespace": "boundary",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+  },
 }
