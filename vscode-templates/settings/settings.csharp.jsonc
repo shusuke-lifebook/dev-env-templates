@@ -1,0 +1,51 @@
+{
+  // --- C# / .NET 設定 ---
+  // "dotnet.defaultSolution": "SelfCSharp.sln", // 自動検出または、プロジェクトで手動で設定
+  "dotnet.server.useOmnisharp": false, // C# Dev Kit の LSP を使用
+
+  // --- フォーマット設定 ---
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "ms-dotnettools.csharp",
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+  },
+
+  // --- ファイル関連 ---
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true,
+    "**/.vs": true,
+  },
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+
+  // --- ターミナル設定（.NET CLI を使いやすく） ---
+  "terminal.integrated.env.linux": {
+    "DOTNET_CLI_TELEMETRY_OPTOUT": "1",
+  },
+
+  // --- VSCode UI カスタマイズ ---
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai",
+
+  // --- Git 設定 ---
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
+
+  // --- Markdown 専用設定 ---
+  "[markdown]": {
+    "editor.insertSpaces": true,
+    "editor.inlineSuggest.enabled": false,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false,
+    },
+    "editor.renderWhitespace": "boundary",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+  },
+}
