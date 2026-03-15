@@ -21,6 +21,7 @@
     "ms-ceintl.vscode-language-pack-ja",
     "ms-dotnettools.csdevkit",
     "ms-dotnettools.csharp",
+    "ms-dotnettools.vscode-dotnet-modernize",
     "ms-dotnettools.vscode-dotnet-runtime",
     "ms-python.autopep8",
     "ms-python.black-formatter",

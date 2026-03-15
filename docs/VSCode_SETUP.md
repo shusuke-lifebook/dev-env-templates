@@ -38,4 +38,11 @@ cp vscode-templates/extensions.json .vscode/extensions.json
 ```
 
 ## インストール済み拡張一覧からextensions.jsonを自動生成する
-- コマンド: code --list-extensions | jq -R -s '{recommendations: split("\n")[:-1]}' > extensions.json
+- Bashの場合
+  - コマンド: code --list-extensions | jq -R -s '{recommendations: split("\n")[:-1]}' > extensions.json
+- Powershellの場合
+  - コマンド：
+    - $ext = code --list-extensions
+    - $ext | ConvertTo-Json | Out-File -Encoding utf8 .vscode/extensions_windows.json
+
+
