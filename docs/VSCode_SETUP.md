@@ -43,6 +43,6 @@ cp vscode-templates/extensions.json .vscode/extensions.json
 - Powershellの場合
   - コマンド：
     - $ext = code --list-extensions
-    - $ext | ConvertTo-Json | Out-File -Encoding utf8 extensions_windows.json
-
-
+    - $json = @{ recommendations = $ext } | ConvertTo-Json -Depth 3
+New-Item -ItemType Directory -Force -Path windows | Out-Null
+$json | Out-File -Encoding utf8 windows/extensions.json
