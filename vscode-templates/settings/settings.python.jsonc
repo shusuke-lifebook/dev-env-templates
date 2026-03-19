@@ -3,6 +3,7 @@
   "python.venvFolders": [".venv"],
   "python.venvPath": "${workspaceFolder}",
   "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
 
   // --- フォーマット & インポート整理 ---
   "editor.formatOnSave": true,
