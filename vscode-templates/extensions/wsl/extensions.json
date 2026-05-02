@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "42crunch.vscode-openapi",
     "adrianwilczynski.asp-net-core-switcher",
     "batisteo.vscode-django",
     "bmewburn.vscode-intelephense-client",
@@ -9,7 +10,6 @@
     "donjayamanne.githistory",
     "esbenp.prettier-vscode",
     "formulahendry.code-runner",
-    "github.copilot-chat",
     "golang.go",
     "google.geminicodeassist",
     "koichisasada.vscode-rdbg",
@@ -47,6 +47,7 @@
     "pmneo.tsimporter",
     "pranaygp.vscode-css-peek",
     "prateekmahendrakar.resxpress",
+    "proohit.openapi-snippets",
     "rangav.vscode-thunder-client",
     "redhat.java",
     "redhat.vscode-yaml",
