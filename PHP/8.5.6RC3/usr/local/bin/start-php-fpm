@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo mkdir -p /run/php
+sudo chmod 755 /run/php
+sudo ~/.local/share/mise/installs/php/8.5.6RC3/sbin/php-fpm
