@@ -1,0 +1,61 @@
+# ==========================================
+# PHP & Composer
+# ==========================================
+# 外部ライブラリは常にComposerから再インストールできるためGit管理外にします
+/vendor/
+
+# Composerのパスワード設定ファイル（存在する場合）
+auth.json
+
+# ==========================================
+# 環境設定・秘密情報
+# ==========================================
+# データベースのパスワードやAPIキーなどの機密情報を含むファイル
+.env
+.env.local
+.env.*.local
+
+# 開発環境ごとのキャッシュファイルなど
+.phpunit.result.cache
+.php-cs-fixer.cache
+
+# ==========================================
+# 一般的なPHPフレームワーク・CMS用
+# ==========================================
+# Laravel / Symfony / WordPress などのキャッシュ、ログ、アップロードファイル
+/storage/
+/bootstrap/cache/
+/var/
+/wp-content/uploads/
+/wp-content/blogs.dir/
+/wp-content/upgrade/
+/wp-content/backup-db/
+
+# ==========================================
+# ログ・キャッシュ
+# ==========================================
+*.log
+/logs/
+/tmp/
+
+# ==========================================
+# OS / IDE (開発ツール) の設定ファイル
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# PhpStorm / VS Code / Sublime Text
+.idea/
+!.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

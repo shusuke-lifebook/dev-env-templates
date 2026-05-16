@@ -1,25 +1,95 @@
 {
-  "php.validate.enable": true,
-  "php.validate.executablePath": "/usr/bin/php",
+  // --- 基本設定 ---
+  "files.eol": "\n",
+  "files.encoding": "utf8",
 
-  "php.executablePath": "/usr/bin/php",
+  // --- ターミナル設定 (WSL2 Ubuntu) ---
+  "terminal.integrated.env.linux": {
+    "PATH": "${env:HOME}/.local/share/mise/shims:${env:PATH}",
+  },
 
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+  // --- VSCode UI カスタマイズ ---
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai",
 
+  // --- git の設定 ---
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
+
+  // --- Markdown 専用設定 ---
+  "[markdown]": {
+    "editor.insertSpaces": true,
+    "editor.inlineSuggest.enabled": false,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false,
+    },
+    "editor.renderWhitespace": "boundary",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+  },
+
+  // --- PHP 設定 (Intelephense + PHP Debug) ---
+  // WSL2 の PHP 実行パス（mise を利用）
+  // 場合によっては${env:USER}が認識されないので、フルパスで指定する必要がある
+  "php.validate.executablePath": "/home/${env:USER}/.local/share/mise/shims/php",
+
+  // Intelephense の強化設定
   "intelephense.environment.phpVersion": "8.5",
   "intelephense.files.maxSize": 5000000,
+  "intelephense.stubs": [
+    "apache",
+    "bcmath",
+    "bz2",
+    "calendar",
+    "curl",
+    "date",
+    "dom",
+    "fileinfo",
+    "filter",
+    "ftp",
+    "gd",
+    "gettext",
+    "hash",
+    "iconv",
+    "json",
+    "libxml",
+    "mbstring",
+    "mysqli",
+    "mysql",
+    "openssl",
+    "pcntl",
+    "pcre",
+    "pdo",
+    "pdo_mysql",
+    "pdo_sqlite",
+    "phar",
+    "posix",
+    "readline",
+    "session",
+    "simplexml",
+    "soap",
+    "sockets",
+    "sodium",
+    "sqlite3",
+    "standard",
+    "tokenizer",
+    "xml",
+    "xmlreader",
+    "xmlwriter",
+    "xdebug",
+    "zip",
+    "zlib",
+  ],
 
-  "debug.allowBreakpointsEverywhere": true,
+  // --- Xdebug (PHP Debug) ---
+  // WSL2 でのパス解決（Windows 側の VSCode と同期）
+  "php.debug.executablePath": "/home/${env:USER}/.local/share/mise/shims/php",
+  "php.debug.ideKey": "VSCODE",
 
-  "php.debug.executablePath": "/usr/bin/php",
-  "php.debug.idekey": "VSCODE",
-  "php.debug.port": 9003,
-  "php.debug.log": true,
-
-  "php.debug.serverSourceRoot": "/var/www/html",
-  "php.debug.localSourceRoot": "${workspaceFolder}",
-
+  // --- ファイル関連 ---
   "files.associations": {
     "*.php": "php",
   },
