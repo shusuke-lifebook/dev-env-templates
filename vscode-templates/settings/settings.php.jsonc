@@ -1,0 +1,26 @@
+{
+  "php.validate.enable": true,
+  "php.validate.executablePath": "/usr/bin/php",
+
+  "php.executablePath": "/usr/bin/php",
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+
+  "intelephense.environment.phpVersion": "8.5",
+  "intelephense.files.maxSize": 5000000,
+
+  "debug.allowBreakpointsEverywhere": true,
+
+  "php.debug.executablePath": "/usr/bin/php",
+  "php.debug.idekey": "VSCODE",
+  "php.debug.port": 9003,
+  "php.debug.log": true,
+
+  "php.debug.serverSourceRoot": "/var/www/html",
+  "php.debug.localSourceRoot": "${workspaceFolder}",
+
+  "files.associations": {
+    "*.php": "php",
+  },
+}
