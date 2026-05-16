@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# PHP-FPM の master プロセスを探して kill
+PID=$(pgrep -f "php-fpm: master process")
+
+if [ -n "$PID" ]; then
+    echo "Stopping PHP-FPM (PID: $PID)"
+    sudo kill "$PID"
+else
+    echo "PHP-FPM is not running"
+fi
