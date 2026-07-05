@@ -1,0 +1,64 @@
+{
+  // --- Rust 言語設定 (rust-analyzer) ---
+  "rust-analyzer.server.path": "rust-analyzer",
+  "rust-analyzer.updates.channel": "stable",
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.cargo.useRustcWrapper": false,
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.inlayHints.enable": true,
+  "rust-analyzer.imports.granularity.group": "module",
+  "rust-analyzer.imports.prefix": "crate",
+
+  // --- フォーマット設定 ---
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+
+  // --- Code Runner 設定 ---
+  "code-runner.executorMap": {
+    "rust": "cd $dir && cargo run"
+  },
+  "code-runner.runInTerminal": true,
+
+  // --- ファイル関連 ---
+  "files.exclude": {
+    "**/target": true,
+    "**/.cache": true
+  },
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+
+  // --- ターミナル設定 (WSL2 Ubuntu) ---
+  "terminal.integrated.env.linux": {
+    "PATH": "${env:HOME}/.cargo/bin:${env:PATH}"
+  },
+
+  // --- VSCode UI カスタマイズ ---
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai",
+
+  // --- git の設定 ---
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
+
+  // --- Markdown 専用設定 ---
+  "[markdown]": {
+    "editor.insertSpaces": true,
+    "editor.inlineSuggest.enabled": false,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    },
+    "editor.renderWhitespace": "boundary",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  }
+}

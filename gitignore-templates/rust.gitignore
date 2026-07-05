@@ -1,0 +1,42 @@
+# --- Rust / Cargo ---
+target/
+Cargo.lock
+**/*.rs.bk
+
+# --- Build / Artifacts ---
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+
+# --- Logs ---
+*.log
+
+# --- Rustup / Toolchains ---
+.rustup/
+.cargo/
+
+# --- VSCode / Editor ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.code-workspace
+
+# --- OS / Temp ---
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*.swo
+
+# --- Testing ---
+coverage/
+htmlcov/
+*.profraw
+*.profdata
+
+# --- Misc ---
+node_modules/
