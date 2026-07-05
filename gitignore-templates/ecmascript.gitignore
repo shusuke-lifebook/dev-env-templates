@@ -1,0 +1,57 @@
+# --- Node.js / ECMAScript ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+
+# --- Build / Bundler Output ---
+dist/
+build/
+out/
+coverage/
+.esbuild/
+.vite/
+.next/
+.nuxt/
+.svelte-kit/
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Environment Files ---
+.env
+.env.*
+!.env.example
+
+# --- Cache / Temp ---
+.cache/
+.tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+
+# --- Logs ---
+*.log
+
+# --- IDE / Editor ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.code-workspace
+
+# --- OS / WSL2 ---
+.DS_Store
+Thumbs.db
+
+# --- Testing ---
+coverage/
+htmlcov/
+*.profraw
+*.profdata
+
+# --- Misc ---
+node_modules/

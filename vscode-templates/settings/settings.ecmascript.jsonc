@@ -1,0 +1,78 @@
+{
+  // --- JavaScript / TypeScript 設定 ---
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
+
+  // 最新 ECMAScript を使うための設定
+  "javascript.preferences.quoteStyle": "double",
+  "typescript.preferences.quoteStyle": "double",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // --- TypeScript Server ---
+  "typescript.tsserver.useSeparateSyntaxServer": true,
+  "typescript.tsserver.log": "off",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+
+  // --- ESLint 設定 ---
+  "eslint.enable": true,
+  "eslint.run": "onSave",
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // --- Prettier 設定 ---
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // --- Node.js / WSL2 PATH ---
+  "terminal.integrated.env.linux": {
+    "PATH": "${env:HOME}/.local/share/mise/shims:${env:PATH}"
+  },
+
+  // --- Code Runner 設定 ---
+  "code-runner.executorMap": {
+    "javascript": "node $file",
+    "typescript": "ts-node $file"
+  },
+  "code-runner.runInTerminal": true,
+
+  // --- ファイル関連 ---
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.cache": true
+  },
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+
+  // --- VSCode UI カスタマイズ ---
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai",
+
+  // --- git の設定 ---
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
+
+  // --- Markdown 専用設定 ---
+  "[markdown]": {
+    "editor.insertSpaces": true,
+    "editor.inlineSuggest.enabled": false,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": false,
+      "comments": false,
+      "strings": false
+    },
+    "editor.renderWhitespace": "boundary",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  }
+}
