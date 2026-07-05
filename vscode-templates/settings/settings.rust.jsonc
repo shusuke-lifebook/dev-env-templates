@@ -1,6 +1,6 @@
 {
   // --- Rust 言語設定 (rust-analyzer) ---
-  "rust-analyzer.server.path": "rust-analyzer",
+  "rust-analyzer.server.path": null,
   "rust-analyzer.updates.channel": "stable",
   "rust-analyzer.checkOnSave": true,
   "rust-analyzer.check.command": "clippy",
@@ -14,29 +14,29 @@
   // --- フォーマット設定 ---
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "explicit",
   },
   "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
   },
 
   // --- Code Runner 設定 ---
   "code-runner.executorMap": {
-    "rust": "cd $dir && cargo run"
+    "rust": "cd $dir && cargo run",
   },
   "code-runner.runInTerminal": true,
 
   // --- ファイル関連 ---
   "files.exclude": {
     "**/target": true,
-    "**/.cache": true
+    "**/.cache": true,
   },
   "files.eol": "\n",
   "files.encoding": "utf8",
 
   // --- ターミナル設定 (WSL2 Ubuntu) ---
   "terminal.integrated.env.linux": {
-    "PATH": "${env:HOME}/.cargo/bin:${env:PATH}"
+    "PATH": "${env:HOME}/.cargo/bin:${env:PATH}",
   },
 
   // --- VSCode UI カスタマイズ ---
@@ -56,9 +56,9 @@
     "editor.quickSuggestions": {
       "other": false,
       "comments": false,
-      "strings": false
+      "strings": false,
     },
     "editor.renderWhitespace": "boundary",
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  }
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+  },
 }
