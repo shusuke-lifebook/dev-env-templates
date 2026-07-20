@@ -1,16 +1,16 @@
-﻿{
+{
   "recommendations": [
     "adrianwilczynski.asp-net-core-switcher",
     "alefragnani.project-manager",
     "bibhasdn.django-html",
     "bmewburn.vscode-intelephense-client",
     "bradlc.vscode-tailwindcss",
+    "davidanson.vscode-markdownlint",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "formulahendry.auto-close-tag",
     "formulahendry.auto-rename-tag",
     "formulahendry.code-runner",
-    "github.copilot-chat",
     "github.remotehub",
     "golang.go",
     "hediet.vscode-drawio",
@@ -69,6 +69,7 @@
     "xdebug.php-debug",
     "yoavbls.pretty-ts-errors",
     "yy0931.vscode-sqlite3-editor",
+    "yzane.markdown-pdf",
     "yzhang.markdown-all-in-one"
   ]
 }
