@@ -3,48 +3,49 @@
   // Rust 言語設定（rust-analyzer）
   // ============================================================
 
-  // rust-analyzer のパスは通常 null で OK（VSCode が自動検出）
   "rust-analyzer.server.path": null,
-
-  // 安定版チャンネルを使用（nightly で不安定化を防ぐ）
   "rust-analyzer.updates.channel": "stable",
 
-  // 保存時に clippy を実行（lint を強化）
+  // 保存時に clippy を実行
   "rust-analyzer.checkOnSave": true,
   "rust-analyzer.check.command": "clippy",
 
-  // proc-macro を有効化（serde などの derive を正しく解析）
+  // proc-macro を有効化
   "rust-analyzer.procMacro.enable": true,
 
-  // インポート整理の粒度（module 単位で整理）
-  "rust-analyzer.imports.granularity.group": "module",
+  // 自動インポート（auto-import）を明示的に有効化
+  "rust-analyzer.completion.autoimport.enable": true,
 
-  // インポートの prefix を crate に統一（可読性向上）
-  "rust-analyzer.imports.prefix": "crate",
+  // インポート整理の粒度（crate 単位が最も安定）
+  "rust-analyzer.imports.granularity.group": "crate",
+
+  // インポート prefix（self が推奨）
+  "rust-analyzer.imports.prefix": "self",
+
+  // diagnostics を強化（未使用 import の検出など）
+  "rust-analyzer.diagnostics.enable": true,
+  "rust-analyzer.diagnostics.disabled": [],
 
   // ============================================================
   // フォーマット設定
   // ============================================================
 
-  // 保存時にフォーマット実行
   "editor.formatOnSave": true,
 
-  // 保存時にインポート整理も実行
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
-  },
-
-  // Rust のデフォルトフォーマッタを rust-analyzer に統一
+  // Rust 専用の import 整理設定
   "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+    },
   },
 
   // ============================================================
-  // Code Runner 設定（cargo run を実行）
+  // Code Runner 設定
   // ============================================================
 
   "code-runner.executorMap": {
-    "rust": "cd $dir && cargo run"
+    "rust": "cd $dir && cargo run",
   },
   "code-runner.runInTerminal": true,
 
@@ -52,13 +53,10 @@
   // ファイル関連
   // ============================================================
 
-  // target ディレクトリなど不要なものを除外
   "files.exclude": {
     "**/target": true,
-    "**/.cache": true
+    "**/.cache": true,
   },
-
-  // 改行コードと文字コードを統一
   "files.eol": "\n",
   "files.encoding": "utf8",
 
@@ -66,9 +64,8 @@
   // ターミナル設定（WSL2）
   // ============================================================
 
-  // cargo / rustup / clippy / rust-analyzer を PATH に追加
   "terminal.integrated.env.linux": {
-    "PATH": "${env:HOME}/.cargo/bin:${env:PATH}"
+    "PATH": "${env:HOME}/.cargo/bin:${env:PATH}",
   },
 
   // ============================================================
@@ -82,49 +79,45 @@
   // Git 設定
   // ============================================================
 
-  // 自動フェッチ（180秒間隔）
   "git.autofetch": true,
   "git.autofetchPeriod": 180,
 
   // ============================================================
-  // Markdown 専用設定（修介さんの標準化）
+  // Markdown 専用設定
   // ============================================================
 
   "[markdown]": {
     "editor.insertSpaces": true,
-    "editor.inlineSuggest.enabled": false, // Copilot の暴発防止
+    "editor.inlineSuggest.enabled": false,
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
     "editor.quickSuggestions": {
       "other": false,
       "comments": false,
-      "strings": false
+      "strings": false,
     },
     "editor.renderWhitespace": "boundary",
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   },
 
   // ============================================================
   // Copilot（インライン補完を最大化）
   // ============================================================
 
-  // インライン補完を有効化（AI が先に提案）
   "editor.inlineSuggest.enabled": true,
 
-  // 言語ごとの Copilot 有効化設定
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false, // 暴発防止
+    "plaintext": false,
     "markdown": true,
     "yaml": true,
     "json": true,
     "php": true,
     "go": true,
     "typescript": true,
-    "rust": true
+    "rust": true,
   },
 
-  // Copilot の提案を VSCode の通常補完より優先
   "editor.suggest.showWords": false,
   "editor.suggest.showSnippets": false,
   "editor.suggest.showMethods": true,
@@ -135,9 +128,7 @@
   // WSL2 安定化設定
   // ============================================================
 
-  // 自動ポートフォワードを無効化（Docker/WSL の暴発防止）
   "remote.autoForwardPorts": false,
-
-  // WSL のファイル監視を polling に変更（安定性向上）
-  "remote.WSL.fileWatcher.polling": true
+  "remote.WSL.fileWatcher.polling": true,
+  "remote.WSL.fileWatcher.usePolling": true,
 }
