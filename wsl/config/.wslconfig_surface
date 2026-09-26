@@ -3,7 +3,6 @@ memory=3GB
 processors=2
 swap=2GB
 localhostForwarding=true
-pageReporting=true
 
 [experimental]
 autoMemoryReclaim=gradual
